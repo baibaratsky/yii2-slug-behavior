@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "baibaratsky\\yii\\behaviors\\model\\Slug": "Slug.php"
+            "baibaratsky\\yii\\behaviors\\model\\": ""
         }
     }
 }
