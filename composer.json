@@ -1,0 +1,20 @@
+{
+    "name": "baibaratsky/yii2-slug-behavior",
+    "description": "Yii2 slug behavior",
+    "type": "yii2-extension",
+    "authors": [
+        {
+            "name": "Andrei Baibaratsky",
+            "email": "andrei@baibaratsky.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "baibaratsky\\yii\\behaviors\\model\\Slug": "Slug.php"
+        }
+    }
+}
