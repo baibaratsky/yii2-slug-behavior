@@ -26,20 +26,6 @@ class Slug extends Behavior
 
     public $enableUniqueCheck = true;
 
-    public function init()
-    {
-        if (!$this->owner instanceof Model) {
-            throw new Exception('This behavior is designed only for Model-based classes.');
-        }
-        if (!in_array($this->sourceAttributeName, $this->owner->attributes())) {
-            throw new UnknownPropertyException('Unknown property: "' . $this->sourceAttributeName . '".');
-        }
-        if (!in_array($this->slugAttributeName, $this->owner->attributes())) {
-            throw new UnknownPropertyException('Unknown property: "' . $this->slugAttributeName . '".');
-        }
-        parent::init();
-    }
-
     public function events()
     {
         return [
