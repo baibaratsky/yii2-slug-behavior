@@ -5,7 +5,6 @@ namespace baibaratsky\yii\behaviors\model;
 use yii\base\Behavior;
 use yii\base\Exception;
 use yii\base\Model;
-use yii\base\UnknownPropertyException;
 use yii\db\ActiveRecordInterface;
 use yii\helpers\Inflector;
 use yii\validators\UniqueValidator;
@@ -24,7 +23,7 @@ class Slug extends Behavior
     public $replacement = '-';
     public $lowercase = true;
 
-    public $enableUniqueCheck = true;
+    public $unique = true;
 
     public function events()
     {
@@ -43,7 +42,7 @@ class Slug extends Behavior
             );
             $this->owner->{$this->slugAttributeName} = $slug;
 
-            if ($this->enableUniqueCheck) {
+            if ($this->unique) {
                 $suffix = 1;
                 while (!$this->uniqueCheck()) {
                     $this->owner->{$this->slugAttributeName} = $slug . $this->replacement . ++$suffix;
