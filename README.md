@@ -1,6 +1,9 @@
 Yii2 slug behavior
 ==================
 
+>**I’d made this behavior before Yii2 became beta. At the moment, there is no need to use this behavior, because Yii2 has its own implementation — `SluggableBehavior`.**
+
+
 This Yii2 model behavior automates the slug generation process. To attach the behavior put the following code in your model:
 ```php
     public function behaviors()
